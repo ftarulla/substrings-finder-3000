@@ -1,1 +1,1 @@
-# substrings-finder-3000
+# Substrings Finder 3000
