@@ -27,41 +27,6 @@ server = HTTP::Server.new do |context|
       response.headers["Access-Control-Allow-Origin"] = "*"
       response.print body
     end
-  # when "/details"
-  #   substring = request.query_params["substring"]?
-
-  #   if substring.nil?
-  #     response.respond_with_status 400 # => 400 Bad Request
-  #   else
-  #     body = JSON.build() do |json|
-  #       json.object do
-  #         json.field "details" do
-  #           json.object do
-  #             json.field "firstLetter" do
-  #               json.object do
-  #                 json.field "name", "Primera Letra"
-  #                 json.field "value" do
-  #                   json.string substring[0]
-  #                 end
-  #               end
-  #             end
-  #             json.field "numberLetters" do
-  #               json.object do
-  #                 json.field "name", "Cantidad de letras"
-  #                 json.field "value" do
-  #                   json.number substring
-  #                 end
-  #               end
-  #             end
-  #           end
-  #         end
-  #       end
-  #     end
-
-  #     response.content_type = "application/json; charset=utf-8"
-  #     response.headers["Access-Control-Allow-Origin"] = "*"
-  #     response.print body
-  #   end
   when "/firstletter"
     word = request.query_params["word"]?
 
